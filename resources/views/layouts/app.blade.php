@@ -8,8 +8,8 @@
     <title>@yield('title', 'LaraBBS') - Laravel 进阶教程</title>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <!-- Styles -->
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <!-- CSS / JS -->
+    @vite(['resources/js/app.js'])
 </head>
 
 <body>
@@ -21,8 +21,6 @@
         </div>
         @include('layouts._footer')
     </div>
-    <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}"></script>
 </body>
 
 </html>
