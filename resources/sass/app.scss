@@ -10,18 +10,19 @@
 // Variables
 @import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// Fontawesome
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/brands';
 
 /* universal */
-
 body {
     font-family: Helvetica, "Microsoft YaHei", Arial, sans-serif;
     font-size: 14px;
 }
 
 /* header */
-
 .navbar-static-top {
     border-color: #e7e7e7;
     background-color: #fff;
