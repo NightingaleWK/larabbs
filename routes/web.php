@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -22,3 +22,6 @@ Route::get('/', [PagesController::class, 'root'])->name('root');
 
 // 认证脚手架
 Auth::routes(['verify' => true]);
+
+// 用户相关
+Route::resource('users', UsersController::class, ['only' => ['show', 'update', 'edit']]);
