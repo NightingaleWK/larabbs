@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\TopicsController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -25,3 +26,5 @@ Auth::routes(['verify' => true]);
 
 // 用户相关
 Route::resource('users', UsersController::class, ['only' => ['show', 'update', 'edit']]);
+
+Route::resource('topics', TopicsController::class, ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
