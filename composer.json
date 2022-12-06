@@ -16,6 +16,7 @@
         "laravel/tinker": "^2.7",
         "mews/captcha": "^3.2",
         "overtrue/laravel-lang": "^6.0",
+        "overtrue/pinyin": "^5.0",
         "summerblue/laravel-active": "9.*"
     },
     "require-dev": {

@@ -4,7 +4,7 @@
         @foreach ($topics as $topic)
             <li
                 class="list-group-item pl-2 pr-2 border-start-0 border-end-0 @if ($loop->first) border-top-0 @endif">
-                <a class="text-decoration-none" href="{{ route('topics.show', $topic->id) }}">
+                <a class="text-decoration-none" href="{{ $topic->link() }}">
                     {{ $topic->title }}
                 </a>
                 <span class="meta float-right text-secondary">
