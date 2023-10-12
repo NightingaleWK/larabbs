@@ -62,3 +62,16 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+$sms = app('easysms');
+try {
+    $sms->send(17560304882, [
+         'template' => 'SMS_180057404',
+         'data' => [
+             'code' => 9741
+         ],
+    ]);
+} catch (\Overtrue\EasySms\Exceptions\NoGatewayAvailableException $exception) {
+    $message = $exception->getException('aliyun')->getMessage();
+    dd($message);
+}
