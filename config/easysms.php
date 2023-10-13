@@ -22,7 +22,7 @@ return [
         'aliyun' => [
             'access_key_id' => env('SMS_ALIYUN_ACCESS_KEY_ID'),
             'access_key_secret' => env('SMS_ALIYUN_ACCESS_KEY_SECRET'),
-            'sign_name' => 'Larabbs',
+            'sign_name' => '璃月港的鱼贩',
             'templates' => [
                 'register' => env('SMS_ALIYUN_TEMPLATE_REGISTER'),
             ]
