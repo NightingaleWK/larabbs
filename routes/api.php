@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\AuthorizationsController;
 use App\Http\Controllers\Api\CaptchasController;
 use App\Http\Controllers\Api\CategoriesController;
 use App\Http\Controllers\Api\ImagesController;
+use App\Http\Controllers\Api\RepliesController;
 use App\Http\Controllers\Api\TopicsController;
 use App\Http\Controllers\Api\UsersController;
 use App\Http\Controllers\Api\VerificationCodesController;
@@ -95,6 +96,11 @@ Route::prefix('v1')
                     // 发布，修改，删除话题
                     Route::apiResource('topics', TopicsController::class)->only([
                         'store', 'update', 'destroy'
+                    ]);
+
+                    // 发布, 删除回复
+                    Route::apiResource('topics.replies', RepliesController::class)->only([
+                        'store', 'destroy'
                     ]);
                 });
             });
