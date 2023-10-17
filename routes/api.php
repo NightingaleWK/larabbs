@@ -60,7 +60,7 @@ Route::prefix('v1')
 
         Route::middleware('throttle:' . config('api.rate_limits.access'))
             ->group(function () {
-                // 游客可以访问的接口
+                // ======= 游客可以访问的接口 =======
 
                 // 话题列表，详情
                 Route::apiResource('topics', TopicsController::class)->only([
@@ -79,7 +79,16 @@ Route::prefix('v1')
                 Route::get('users/{user}/topics', [TopicsController::class, 'userIndex'])
                     ->name('users.topics.index');
 
-                // 登录后可以访问的接口
+                // 话题回复列表
+                Route::apiResource('topics.replies', RepliesController::class)->only([
+                    'index',
+                ]);
+
+                // 某个用户的回复列表
+                Route::get('users/{user}/replies', [RepliesController::class, 'userIndex'])
+                    ->name('users.replies.index');
+
+                // ======= 登录后可以访问的接口 =======
                 Route::middleware('auth:api')->group(function () {
                     // 当前登录用户信息
                     Route::get('user', [UsersController::class, 'me'])
