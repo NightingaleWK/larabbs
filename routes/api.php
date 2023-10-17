@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\AuthorizationsController;
 use App\Http\Controllers\Api\CaptchasController;
+use App\Http\Controllers\Api\CategoriesController;
 use App\Http\Controllers\Api\ImagesController;
 use App\Http\Controllers\Api\UsersController;
 use App\Http\Controllers\Api\VerificationCodesController;
@@ -57,6 +58,12 @@ Route::prefix('v1')
 
         Route::middleware('throttle:' . config('api.rate_limits.access'))
             ->group(function () {
+                // 游客可以访问的接口
+
+                // 分类列表
+                Route::apiResource('categories', CategoriesController::class)
+                    ->only('index');
+
                 // 某个用户的详情
                 Route::get('users/{user}', [UsersController::class, 'show'])
                     ->name('users.show');
