@@ -117,6 +117,10 @@ Route::prefix('v1')
                     Route::apiResource('notifications', NotificationsController::class)->only([
                         'index'
                     ]);
+
+                    // 通知统计
+                    Route::get('notifications/stats', [NotificationsController::class, 'stats'])
+                        ->name('notifications.stats');
                 });
             });
     });
