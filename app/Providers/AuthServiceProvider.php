@@ -40,8 +40,6 @@ class AuthServiceProvider extends ServiceProvider
             return Auth::user()->hasRole('Founder');
         });
 
-        // Passport 的路由
-        Passport::routes();
         // access_token 过期时间
         Passport::tokensExpireIn(now()->addDays(15));
         // refreshTokens 过期时间
