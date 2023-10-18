@@ -26,6 +26,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('v1')
+    ->middleware('change-locale')
     ->name('api.v1.')
     ->group(function () {
 
