@@ -36,7 +36,9 @@
                             <a class="dropdown-item" id="logout" href="#">
                                 <form action="{{ route('logout') }}" method="POST">
                                     {{ csrf_field() }}
-                                    <button class="btn btn-block btn-danger" type="submit" name="button">退出</button>
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-block btn-danger" type="submit" name="button">退出</button>
+                                    </div>
                                 </form>
                             </a>
                         </div>
