@@ -32,7 +32,7 @@
     "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.woff2"
   },
   "resources/js/app.css": {
-    "file": "assets/app-46064c0e.css",
+    "file": "assets/app-33d43b4a.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -47,9 +47,9 @@
       "assets/fa-v4compatibility-455e8e72.ttf"
     ],
     "css": [
-      "assets/app-46064c0e.css"
+      "assets/app-33d43b4a.css"
     ],
-    "file": "assets/app-189051b9.js",
+    "file": "assets/app-a43fa0fd.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
