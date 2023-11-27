@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\TopicsController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -23,4 +24,8 @@ Auth::routes(['verify' => true]);
 
 Route::resource('users', UsersController::class)->only([
     'show', 'edit', 'update'
+]);
+
+Route::resource('topics', TopicsController::class)->only([
+    'index', 'show', 'create', 'store', 'update', 'edit', 'destroy'
 ]);
