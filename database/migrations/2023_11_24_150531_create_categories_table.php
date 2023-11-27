@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name')->index()->comment('名称');
+            $table->text('description')->nullable()->comment('描述');
+            $table->integer('post_count')->default(0)->comment('帖子数');
         });
     }
 
