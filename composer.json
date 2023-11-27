@@ -17,6 +17,7 @@
         "mews/captcha": "^3.3"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.9",
         "fakerphp/faker": "^1.9.1",
         "laravel-lang/common": "^5.3",
         "laravel/pint": "^1.0",
