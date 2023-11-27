@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\TopicsController;
@@ -28,4 +29,8 @@ Route::resource('users', UsersController::class)->only([
 
 Route::resource('topics', TopicsController::class)->only([
     'index', 'show', 'create', 'store', 'update', 'edit', 'destroy'
+]);
+
+Route::resource('categories', CategoriesController::class)->only([
+    'show'
 ]);
