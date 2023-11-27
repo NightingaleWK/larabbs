@@ -60,4 +60,14 @@ class User extends Authenticatable implements MustVerifyEmail
         }
         return $value;
     }
+
+    /**
+     * 获取该模型相关的所有话题
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function topics()
+    {
+        return $this->hasMany(Topic::class);
+    }
 }

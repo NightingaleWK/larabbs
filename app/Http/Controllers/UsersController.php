@@ -26,12 +26,14 @@ class UsersController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * 展示编辑指定资源的表单。
      */
     public function edit(User $user)
     {
+        // 检查当前用户是否有更新该用户的权限
         $this->authorize('update', $user);
 
+        // 返回用户编辑页面的视图，同时传递用户对象到视图
         return view('users.edit', compact('user'));
     }
 
