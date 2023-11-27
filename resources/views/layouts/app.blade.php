@@ -57,7 +57,7 @@
             editor,
             selector: '#toolbar-container',
             config: toolbarConfig,
-            mode: 'default', // or 'simple'
+            mode: 'simple', // or 'default'
         })
     </script>
 </body>

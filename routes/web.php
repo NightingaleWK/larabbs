@@ -34,3 +34,5 @@ Route::resource('topics', TopicsController::class)->only([
 Route::resource('categories', CategoriesController::class)->only([
     'show'
 ]);
+
+Route::post('upload_image', [TopicsController::class, 'uploadImage'])->name('topics.upload_image');
