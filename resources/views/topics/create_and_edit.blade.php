@@ -46,11 +46,7 @@
 
                     <div class="mb-3">
                         <label for="body" class="form-label">文章内容</label>
-                        <div id="editor—wrapper" name="body">
-                            <div id="toolbar-container"><!-- 工具栏 --></div>
-                            <div id="editor-container"><!-- 编辑器 --></div>
-                        </div>
-                        {{-- <textarea name="body" class="form-control" id="editor" rows="6" placeholder="请填入至少三个字符的内容。" required>{{ old('body', $topic->body) }}</textarea> --}}
+                        <textarea name="body" class="form-control" id="editor" rows="6" placeholder="请填入至少三个字符的内容。" required>{{ old('body', $topic->body) }}</textarea>
                     </div>
 
                     <div class="well well-sm">
