@@ -17,6 +17,7 @@
         "laravel/tinker": "^2.8",
         "mews/captcha": "^3.3",
         "mews/purifier": "^3.4",
+        "octopyid/laravel-impersonate": "^4.0",
         "overtrue/pinyin": "^5.3",
         "predis/predis": "^2.2",
         "spatie/laravel-permission": "^6.1"

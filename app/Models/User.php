@@ -10,10 +10,12 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Auth\MustVerifyEmail as MustVerifyEmailTrait;
 use Illuminate\Support\Facades\Auth;
+use Octopy\Impersonate\Concerns\HasImpersonation;
 use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
+    use HasImpersonation;
     use HasApiTokens, HasFactory, MustVerifyEmailTrait;
 
     use Notifiable {
@@ -109,5 +111,26 @@ class User extends Authenticatable implements MustVerifyEmail
         $this->notification_count = 0;
         $this->save();
         $this->unreadNotifications->markAsRead();
+    }
+
+    /**
+     * @return string
+     */
+    public function getImpersonateDisplayText(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * This following is useful for performing user searches through the interface,
+     * You can use fields in relations freely using dot notation,
+     * 
+     * example: posts.title, department.name.   
+     */
+    public function getImpersonateSearchField(): array
+    {
+        return [
+            'name',
+        ];
     }
 }

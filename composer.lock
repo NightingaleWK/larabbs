@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e4426909bd09600c89b7136fd6d7be6",
+    "content-hash": "17f90c24ba87034d8017b16183e85356",
     "packages": [
         {
             "name": "brick/math",
@@ -2688,6 +2688,73 @@
                 }
             ],
             "time": "2023-02-08T01:06:31+00:00"
+        },
+        {
+            "name": "octopyid/laravel-impersonate",
+            "version": "v4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/OctopyID/LaraPersonate.git",
+                "reference": "4c9705d7ac8d28b29663c219893c67ffa6b8fa74"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/OctopyID/LaraPersonate/zipball/4c9705d7ac8d28b29663c219893c67ffa6b8fa74",
+                "reference": "4c9705d7ac8d28b29663c219893c67ffa6b8fa74",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "conflict": {
+                "lab404/laravel-impersonate": "*"
+            },
+            "require-dev": {
+                "nunomaduro/collision": "^7.8",
+                "orchestra/testbench": "^8.11"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Octopy\\Impersonate\\Providers\\ImpersonateServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/Helpers.php"
+                ],
+                "psr-4": {
+                    "Octopy\\Impersonate\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Supian M",
+                    "email": "supianidz@gmail.com"
+                }
+            ],
+            "description": "Login as a different user quickly",
+            "support": {
+                "issues": "https://github.com/OctopyID/LaraPersonate/issues",
+                "source": "https://github.com/OctopyID/LaraPersonate/tree/v4.0.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/SupianIDz",
+                    "type": "github"
+                },
+                {
+                    "url": "https://ko-fi.com/SupianIDz",
+                    "type": "ko_fi"
+                }
+            ],
+            "time": "2023-11-09T07:51:04+00:00"
         },
         {
             "name": "overtrue/pinyin",
