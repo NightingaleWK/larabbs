@@ -15,7 +15,8 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "mews/captcha": "^3.3",
-        "mews/purifier": "^3.4"
+        "mews/purifier": "^3.4",
+        "overtrue/pinyin": "^5.3"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.9",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "60666053b02137c08e3c84f35e1d61d0",
+    "content-hash": "27f017b0f3c2a4d74dea74e7a0517135",
     "packages": [
         {
             "name": "brick/math",
@@ -2610,6 +2610,81 @@
                 }
             ],
             "time": "2023-02-08T01:06:31+00:00"
+        },
+        {
+            "name": "overtrue/pinyin",
+            "version": "5.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/overtrue/pinyin.git",
+                "reference": "cd40f248239231ae2d1f94348c323a40c7fc58b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/overtrue/pinyin/zipball/cd40f248239231ae2d1f94348c323a40c7fc58b1",
+                "reference": "cd40f248239231ae2d1f94348c323a40c7fc58b1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2"
+            },
+            "require-dev": {
+                "brainmaestro/composer-git-hooks": "^2.7",
+                "friendsofphp/php-cs-fixer": "^3.2",
+                "laravel/pint": "^1.10",
+                "nunomaduro/termwind": "^1.13",
+                "phpunit/phpunit": "^10.1"
+            },
+            "bin": [
+                "bin/pinyin"
+            ],
+            "type": "library",
+            "extra": {
+                "hooks": {
+                    "pre-commit": [
+                        "composer pint",
+                        "composer test"
+                    ],
+                    "pre-push": [
+                        "composer pint",
+                        "composer test"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Overtrue\\Pinyin\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "overtrue",
+                    "email": "anzhengchao@gmail.com",
+                    "homepage": "http://github.com/overtrue"
+                }
+            ],
+            "description": "Chinese to pinyin translator.",
+            "homepage": "https://github.com/overtrue/pinyin",
+            "keywords": [
+                "Chinese",
+                "Pinyin",
+                "cn2pinyin"
+            ],
+            "support": {
+                "issues": "https://github.com/overtrue/pinyin/issues",
+                "source": "https://github.com/overtrue/pinyin/tree/5.3.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/overtrue",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-10-27T02:04:12+00:00"
         },
         {
             "name": "phpoption/phpoption",
