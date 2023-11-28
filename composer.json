@@ -18,7 +18,8 @@
         "mews/captcha": "^3.3",
         "mews/purifier": "^3.4",
         "overtrue/pinyin": "^5.3",
-        "predis/predis": "^2.2"
+        "predis/predis": "^2.2",
+        "spatie/laravel-permission": "^6.1"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.9",

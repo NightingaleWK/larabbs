@@ -8,7 +8,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class TopicsTableSeeder extends Seeder
 {
-    // use WithoutModelEvents;
+    use WithoutModelEvents;
 
     public function run()
     {
